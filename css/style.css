@@ -1,0 +1,101 @@
+::selection {
+    background: #fec260;
+}
+
+body {
+    background: #f7ecde;
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+.section-header {
+    font-family: "Pacifico", cursive;
+    font-size: 3.125rem;
+    width: fit-content;
+}
+
+.form-control:focus {
+    border-color: #fec260;
+    box-shadow: 0 0 2px 0.1rem #fec260;
+}
+
+.section-header::before {
+    content: "";
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    background-color: #fec260;
+    z-index: -1;
+    transition: 0.3s all;
+}
+
+.section-header:hover::before {
+    height: 50%;
+}
+
+.bookmark-content {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+.bookmark-content h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 1.5625rem;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn-submit {
+    background-color: #d1512d;
+    width: fit-content;
+}
+
+.btn-submit:hover {
+    background-color: #bb4120;
+}
+
+.box-overlay {
+    background-color: #0007;
+}
+
+.box-content {
+    width: 500px;
+    z-index: 999;
+}
+
+.rounded-circle {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.rounded-circle:nth-child(3) {
+    background-color: #4db748;
+}
+
+.rounded-circle:nth-child(2) {
+    background-color: #febe2e;
+}
+
+.rounded-circle:nth-child(1) {
+    background-color: #f15f5d;
+}
+
+.x-btn:hover {
+    background-color: #bb4120;
+}
+
+.constr {
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.constr i {
+    color: #bb4120;
+}
+
+.table > tbody {
+    vertical-align: middle;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bookmark</title>
+        <link rel="shortcut icon" href="imgs/favicon-16x16.png" type="image/x-icon" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet" />
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body class="position-relative">
+        <main class="container py-5">
+            <h1 class="section-header text-center py-2 position-relative mx-auto">Bookmarker</h1>
+            <div class="bookmark-content text-center mt-5 py-4 d-flex flex-column justify-content-center">
+                <h2>
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="site-name fw-bold mb-3 pb-2 d-flex flex-column align-items-start">
+                    <label for="bookmark-site-name" class="pb-2"> <i class="fa-solid fa-book-bookmark pe-2"></i> Site Name </label>
+                    <input type="text" class="form-control" id="bookmark-site-name" placeholder="Bookmark Name" oninput="validate_website_name()" />
+                </div>
+                <div class="site-url fw-bold pb-2 d-flex flex-column align-items-start">
+                    <label for="bookmark-site-url" class="pb-2"> <i class="fa-solid fa-link pe-2"></i>Site URL </label>
+                    <input type="url" class="form-control" id="bookmark-site-url" placeholder="Website URL" oninput="validate_website_url()" />
+                </div>
+                <button class="btn btn-submit mx-auto mt-3 text-white px-5" id="btn-submit" onclick="add_website()">Submit</button>
+            </div>
+            <table class="table bg-light text-center mt-5">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">Index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table-content"></tbody>
+            </table>
+            <div class="box-overlay d-none position-absolute start-0 top-0 bottom-0 end-0 h-100 w-100 d-flex justify-content-center align-items-center" id="box-overlay">
+                <div class="box-content bg-white p-4 rounded-2 shadow-lg">
+                    <div class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                        <div class="circles d-flex">
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                            <span class="rounded-circle me-2"></span>
+                        </div>
+                        <button class="btn x-btn" onclick="exit()">
+                            <i class="fa-solid fa-xmark close fs-3"></i>
+                        </button>
+                    </div>
+                    <p class="mb-0 pb-2 fw-bold">Site Name or Url is not valid, Please follow the rules below :</p>
+                    <ul class="list-unstyled m-0 constr">
+                        <li><i class="fa-regular fa-circle-right p-2"></i> Site name must contain at least 3 characters</li>
+                        <li><i class="fa-regular fa-circle-right p-2"></i> Site URL must be a valid one</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
